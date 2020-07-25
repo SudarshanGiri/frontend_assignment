@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuppyGram</title>
+    <!--css custom stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!--navbar start-->
+    <nav>
+        <div class="logo">
+            <h4>PUPPY GRAM</h4>
+        </div>
+        <ul class="nav-links">
+            <li><input id="searchbox" type="text" placeholder="Search"></li>
+            <li><button class="uploadbtn">Upload</button></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <!--navbar end-->
+    <h2>Trending Now</h2>
+    <div class="imgcontainer">
+        <div class="dog_image"
+            style="background-image: url(/images/download.jpg); width: 200px; height: 200px; background-size: cover; background-position: center;">
+
+        </div>
+
+
+    </div>
+    <!--upload modal-->
+    <div class="modal upload_modal modal--hidden">
+        <div class="modal_contents">
+            <div class="modal_close_bar"><span>X</span></div>
+            <h2>Upload your dog photo</h2>
+            <div>Upload a photo
+                <label for="inpFile" style="background-color:#ccc;padding:5px 30px; ">Upload</label>
+                <input id="inpFile" style="visibility:collapse;" type="file" />
+                <img id="previewImage" src="" width="100px" height="100px" alt="">
+            </div>
+            <div>Title<textarea name="" id="title" cols="30" rows="1"></textarea></div>
+            <div>Description <textarea name="" id="" cols="30" rows="10">Description</textarea></div>
+            <div>Secret User Id <textarea name="" id="" cols="30" rows="1"></textarea></div>
+            <button id="submit">Submit</button>
+
+
+        </div>
+    </div>
+
+    <!--dog detail modal-->
+    <div id="dog_detail_modal" class="modal dog_detail_modal modal--hidden">
+        <div class="modal_contents">
+            <div class="dog_modal_close_bar modal_close_bar"><span>X</span></div>
+            <div><img src="images/download.jpg" alt="" width="300px" height="300px"></div>
+            <h2>Title</h2>
+            <div>Description</div>
+
+
+        </div>
+    </div>
+    <!--END dog detail modal-->
+    <footer>Copyright 2020 - Puppygram Inc.</footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
