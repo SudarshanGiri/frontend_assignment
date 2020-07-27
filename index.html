@@ -14,11 +14,14 @@
     <!--navbar start-->
     <nav>
         <div class="logo">
-            <h4>PUPPY GRAM</h4>
+            <img src="images/LOGO.png" alt="">
         </div>
         <ul class="nav-links">
             <li><input id="searchbox" type="text" placeholder="Search"></li>
             <li><button class="uploadbtn">Upload</button></li>
+            <li>
+                <div class="mb">MB</div>
+            </li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -27,11 +30,12 @@
         </div>
     </nav>
     <!--navbar end-->
-    <h2>Trending Now</h2>
+    <div class="heading"> Trending Now</div>
+    <!--Dog Images container-->
     <div id="img_container" class="imgcontainer">
 
-
     </div>
+    <!---end dog image container-->
     <!-- dog upload modal form-->
     <div class="modal upload_modal modal--hidden">
         <div class="modal_contents">
@@ -39,7 +43,7 @@
             <h2>Upload your dog photo</h2>
             <form id="dog-form" class="modal_contents">
                 <div class="form-group">
-                    <label class="inpFile" for="inpFile">Upload</label>
+                    Select a photo <label class="inpFile" for="inpFile">Select Photo</label>
                     <input id="inpFile" style="visibility:collapse;" type="file" />
                     <img id="previewImage" src="" width="100px" height="100px" alt="">
 
@@ -66,41 +70,22 @@
     <!--end dog upload modal form-->
 
     <!--dog detail modal-->
-
-    <!--<div id="dog_image11" class="modal dog_detail_modal modal--hidden">
-        <div class="modal_contents">
-            <div class="dog_detail_modal_close_bar modal_close_bar"><span>X</span></div>
-            <div><img src="images/download.jpg" alt="" width="300px" height="300px"></div>
-            <h2> Title 222222</h2>
-            <div>Description 22222222</div>
-
-        </div>
-    </div>
-    <div id="dog_image21" class="modal dog_detail_modal modal--hidden">
-        <div class="modal_contents">
-            <div class="dog_detail_modal_close_bar modal_close_bar"><span>X</span></div>
-            <div><img src="images/download.jpg" alt="" width="300px" height="300px"></div>
-            <h2> Title 222222</h2>
-            <div>Description 22222222</div>
-
-        </div>
-    </div>
-    <div id="new2" class="modal dog_detail_modal modal--hidden">
-        <div class="modal_contents">
-            <div class="dog_detail_modal_close_bar modal_close_bar"><span>X</span></div>
-            <div><img src="images/download.jpg" alt="" width="300px" height="300px"></div>
-            <h2> Title NEWWW222/h2>
-                <div>Description 22222222</div>
-
-        </div>
-    </div>-->
     <div id="modal_container" class="modal_container">
 
 
     </div>
     <!--END dog detail modal-->
-    <footer>Copyright 2020 - Puppygram Inc.</footer>
+    <footer>
+        <ul>
+            <li>About Us</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+            <li>Contact Us</li>
+            <li>FAQ</li>
+        </ul>
+        <div class="footer"><img src="images/logo2.png" alt=""> Copyright2020 - Puppygram Inc</div>
 
+    </footer>
 
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>

@@ -3,31 +3,14 @@ class Dog{
     constructor(title, description, dog_id,img_address){
         this.title=title;
         this.description=description;
-        this.dog_id=dog_id;
+        this.dog_id="a"+dog_id; //adding string "a" to the input id because queryselector id cannot start with a number
         this.img_address=img_address;
 
     }
 }
 //UI Class: Handle UI Tasks
 class UI{
-    /*static displayDogs(){
-        const StoredDogs=[
-            {
-                title: 'Dog  One',
-                description:'this is description',
-                dog_id: 'xx1',
-                
-            },
-            {
-                title:'Dog Two',
-                description:'This is desc 2',
-                dog_id:'xx2'
-            }
-        ];
-        const dogs =StoredDogs;
-        dogs.forEach((dog)=>UI.addDogToList(dog));
- 
-    }*/
+    
     static addDogToList(dog){
         const img_container=document.querySelector('#img_container');
         const new_element=document.createElement('div');
@@ -74,8 +57,13 @@ class UI{
     
     static deleteDog(el){
         if(el.classList.contains('delete')){
-            console.log("deleting"+ el);
+            let deleteConfirmMessage=confirm("Are you sure you want to delete?");
+            if (deleteConfirmMessage){
+                console.log("deleting"+ el);
             el.parentElement.remove();
+
+            }
+            
         }
     }
     
@@ -102,9 +90,6 @@ class UI{
 
 }
 
-//Event: Display Dogs
-//document.addEventListener('DOMContentLoaded', UI.displayDogs);
-
 //Event: Add a dog
 document.querySelector('#dog-form').addEventListener('submit', (e)=>{
     //Prevent actual event
@@ -115,24 +100,32 @@ document.querySelector('#dog-form').addEventListener('submit', (e)=>{
     const dog_id =document.querySelector('#dog_id').value;
     var img_address=src;
     
-
     //validate
- 
+    
+    //validate iF SUM OF digits of the input of secret user id is equal to 7
+    let n=dog_id;
+    let result=(n - 1) % 9 + 1;
+    
     if(dog_id===''|| title ===''|| dog_id==='' ){
         alert('Please fill in all fields');
     }
-   
+    else if (result!=7){
+        alert('!!! FAILED Invalid secret user ID');
 
+    }
+    
     else{
          // Instantiate dog
         const dog =new Dog(title, descripton, dog_id,img_address);
         console.log(dog);
-        //Add Dog to UI
+        //Add Dog to UI...create dog
         UI.addDogToList(dog);
+        //add dog to modal...create dog modal
         UI.addDogToModal(dog);
     
         //Clear fields
         UI.clearFields();
+        alert('success');
 
     }
 
