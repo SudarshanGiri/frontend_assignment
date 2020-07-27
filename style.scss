@@ -62,14 +62,28 @@ nav{
 .imgcontainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
- 
+    padding: 20px;
     .dog_image{
-        margin-top: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+        .delete{
+            display: none;
+            border: none;
+            color: red;
+            font-size: 30px;
+            float: right;
+
+
+        }
+       
     }
 }
+.dog_image:hover .delete{
+    display: block;
 
- 
+
+
+}
 
 .modal{
     background-color: rgba(0, 0, 0, 0.6);
@@ -84,12 +98,20 @@ nav{
         display: none;
 
     }
+   
+    
     .modal_contents{
         display: flex;
         flex-direction: column;
         background-color:#fff;
-        padding: 50px;
+        padding: 20px;
         font-family: sans-serif;
+        .inpFile{
+            background-color: #ddd;
+            color: black;
+            padding: 5px 10px;
+        
+        }
         div{
             margin: 10px 0px;
          
@@ -102,6 +124,7 @@ nav{
             img{
                 float: right;
             }
+            
         
            
          
@@ -111,9 +134,14 @@ nav{
             display: flex;
             justify-content: flex-end;
             margin-right: -2rem;
-            margin-top: -2rem;
             span{
                 cursor: pointer;
+                color: red;
+                padding: 10px;
+                font-size: 30px;
+                position: absolute;
+                margin-left: 30px;
+                margin-top: -50px;
             }
         }
         
